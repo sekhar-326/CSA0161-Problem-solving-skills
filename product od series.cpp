@@ -9,6 +9,6 @@ int main()
 		printf("%d * ",i);
 		product=product*i;
 	}
-	printf("\nThe product of preceeding series is %d:",product);
+	printf("\nThe product of preceeding series is = %d",product);
 	return 0;
 }

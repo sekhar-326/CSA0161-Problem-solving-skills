@@ -1,18 +1,27 @@
 #include <stdio.h>
-
-int main() {
-    int arr[] = {12, 34, 1, 5, 8, 60};
-    int n = sizeof(arr) / sizeof(arr[0]); // size of the array
-    int x = 5; // number to search for
-    int i;
-    for (i = 0; i < n; i++) {
-        if (arr[i] == x) { // if element is found
-            printf("Element found at index %d\n", i);
-            break;
-        }
+int main()
+{
+  int array[10], x, i, n;
+  printf("Enter number of elements in array\n");
+  scanf("%d", &n);
+  printf("Enter %d integer(s)\n", n);
+  for (i = 0; i < n; i++)
+  {
+    scanf("%d", &array[i]);
+  }
+  printf("Enter a number to search\n");
+  scanf("%d", &x);
+  for (i = 0; i < n; i++)
+  {
+    if (array[i] == x)    
+    {
+      printf("%d is present at index %d.\n", x, i);
+      break;
     }
-    if (i == n) { // if element is not found
-        printf("Element not found in the array.\n");
-    }
-    return 0;
+  }
+  if (i == n)
+  {
+    printf("%d isn't present in the array.\n", x);
+  }
+  return 0;
 }
